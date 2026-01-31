@@ -1,12 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import MissionSection from "@/components/MissionSection";
+import HowItWorks from "@/components/HowItWorks";
+import ImpactStats from "@/components/ImpactStats";
+import Features from "@/components/Features";
+import DownloadSection from "@/components/DownloadSection";
+import Testimonials from "@/components/Testimonials";
+import Partners from "@/components/Partners";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Update document title for SEO
+    document.title = "PlastiSignal - Turn Plastic into Value | Sustainable Recycling Platform";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "PlastiSignal connects households with plastic waste to collectors and recyclers using a signal-based weekly pickup system. Join thousands creating cleaner communities and dignified livelihoods."
+      );
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content =
+        "PlastiSignal connects households with plastic waste to collectors and recyclers using a signal-based weekly pickup system. Join thousands creating cleaner communities and dignified livelihoods.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <MissionSection />
+        <HowItWorks />
+        <ImpactStats />
+        <Features />
+        <DownloadSection />
+        <Testimonials />
+        <Partners />
+      </main>
+      <Footer />
     </div>
   );
 };
