@@ -33,9 +33,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
@@ -52,7 +51,7 @@ const Navbar = () => {
               <Recycle className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Plasti<span className="text-primary">Signal</span>
+              Plasti<span className="text-primary">Cycle</span>
             </span>
           </a>
 

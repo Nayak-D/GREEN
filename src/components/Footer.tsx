@@ -42,7 +42,7 @@ const Footer = () => {
                 <Recycle className="w-6 h-6 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold">
-                Plasti<span className="text-primary">Signal</span>
+                Plasti<span className="text-primary">Cycle</span>
               </span>
             </div>
             <p className="text-background/70 mb-6 leading-relaxed">
@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-background/50 text-sm">
-            © {currentYear} PlastiSignal. All rights reserved.
+            © {currentYear} PlastiCycle. All rights reserved.
           </p>
           <p className="text-background/50 text-sm">
             Made with 💚 for a cleaner planet

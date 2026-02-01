@@ -10,7 +10,7 @@ const DownloadSection = () => {
     <section id="download" ref={ref} className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-      
+
       <div className="section-container relative">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -33,7 +33,6 @@ const DownloadSection = () => {
               >
                 <Smartphone className="w-10 h-10 text-white" />
               </motion.div>
-
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
@@ -49,8 +48,7 @@ const DownloadSection = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-6"
               >
-                Download the{" "}
-                <span className="gradient-text">PlastiSignal App</span>
+                Recycle and Earn. <span className="gradient-text">Rewarding you for being Eco-friendly.</span>
               </motion.h2>
 
               <motion.p
@@ -59,60 +57,35 @@ const DownloadSection = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto"
               >
-                Join thousands of households and collectors already making a
-                difference. Available on Android with iOS coming soon.
+                Sell your recyclables online. Get cash and eco-coins for your contributions and use them to buy eco-friendly products from our eco-store. Download PlastiCycle and start your eco-friendly journey.
               </motion.p>
-
-              {/* Download Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-              >
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-3 bg-foreground text-background px-8 py-4 rounded-xl hover:opacity-90 transition-opacity group"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-7 h-7"
-                    fill="currentColor"
-                  >
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
-                  </svg>
-                  <div className="text-left">
-                    <div className="text-xs opacity-75">Get it on</div>
-                    <div className="text-lg font-semibold">Google Play</div>
-                  </div>
-                </a>
-
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-3 border-2 border-foreground text-foreground px-8 py-4 rounded-xl hover:bg-foreground hover:text-background transition-colors"
-                >
-                  <Download className="w-7 h-7" />
-                  <div className="text-left">
-                    <div className="text-xs opacity-75">Direct Download</div>
-                    <div className="text-lg font-semibold">APK File</div>
-                  </div>
-                </a>
-              </motion.div>
 
               {/* QR Code Placeholder */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="flex items-center justify-center gap-4 text-muted-foreground"
+                className="flex flex-col items-center justify-center gap-4 text-muted-foreground"
               >
-                <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center">
-                  <QrCode className="w-10 h-10" />
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-lg bg-muted flex items-center justify-center">
+                    <QrCode className="w-10 h-10" />
+                  </div>
+                  <div className="text-left text-sm">
+                    <div className="font-medium text-foreground">Scan to download</div>
+                    <div>Point your camera at the QR code</div>
+                  </div>
                 </div>
-                <div className="text-left text-sm">
-                  <div className="font-medium text-foreground">Scan to download</div>
-                  <div>Point your camera at the QR code</div>
-                </div>
+                {/* Provided QR code image below */}
+                <img src="/qr-scan-app.png" alt="Scan to Open App QR" className="mt-4 w-40 h-40 object-contain" />
+                <a
+                  href="http://localhost:16000/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-primary underline text-base hover:text-primary/80 transition-colors"
+                >
+                  Scan this or follow link
+                </a>
               </motion.div>
             </div>
           </motion.div>

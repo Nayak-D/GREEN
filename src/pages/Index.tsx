@@ -13,20 +13,20 @@ import { useEffect } from "react";
 const Index = () => {
   useEffect(() => {
     // Update document title for SEO
-    document.title = "PlastiSignal - Turn Plastic into Value | Sustainable Recycling Platform";
-    
+    document.title = "PlastiCycle - Recycle and Earn | Eco Rewards Platform";
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "PlastiSignal connects households with plastic waste to collectors and recyclers using a signal-based weekly pickup system. Join thousands creating cleaner communities and dignified livelihoods."
+        "PlastiCycle lets you sell recyclables online and earn cash and eco-coins. Join the eco-friendly movement and shop green products with your rewards!"
       );
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
       meta.content =
-        "PlastiSignal connects households with plastic waste to collectors and recyclers using a signal-based weekly pickup system. Join thousands creating cleaner communities and dignified livelihoods.";
+        "PlastiCycle lets you sell recyclables online and earn cash and eco-coins. Join the eco-friendly movement and shop green products with your rewards!";
       document.head.appendChild(meta);
     }
   }, []);
